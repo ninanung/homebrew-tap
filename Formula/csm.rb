@@ -5,13 +5,13 @@
 class Csm < Formula
   desc "TUI for browsing and resuming Claude Code sessions"
   homepage "https://github.com/ninanung/csm"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ninanung/csm/releases/download/v0.2.0/csm_0.2.0_darwin_amd64.tar.gz"
-      sha256 "e892cfee960184a2dde1894cab267ecd14c8a7bab3ff5f876078cb1c072fa0ea"
+      url "https://github.com/ninanung/csm/releases/download/v0.3.0/csm_0.3.0_darwin_amd64.tar.gz"
+      sha256 "804d381901d89deee873019ba61ae65ce46a96676e0632157eadbd26c6a12a1e"
 
       define_method(:install) do
         bin.install "csm"
@@ -19,8 +19,8 @@ class Csm < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ninanung/csm/releases/download/v0.2.0/csm_0.2.0_darwin_arm64.tar.gz"
-      sha256 "1b13b4b33b351ddbf165239634c8824aa4eb24953d92481cae800420f01c0641"
+      url "https://github.com/ninanung/csm/releases/download/v0.3.0/csm_0.3.0_darwin_arm64.tar.gz"
+      sha256 "6f2b863c50d439b14ad6c8d7ee3e7c69bac7c57ffea5287dfa2034d750e1f94c"
 
       define_method(:install) do
         bin.install "csm"
@@ -31,16 +31,16 @@ class Csm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninanung/csm/releases/download/v0.2.0/csm_0.2.0_linux_amd64.tar.gz"
-      sha256 "086ba6ab19a64e8bbebab0665f3b9187a0facfffb6923424adc2470cda6c7da7"
+      url "https://github.com/ninanung/csm/releases/download/v0.3.0/csm_0.3.0_linux_amd64.tar.gz"
+      sha256 "751cf299106bbf822002f23545c9579ce6e69b1bc75eec7e325e2570a19f8deb"
       define_method(:install) do
         bin.install "csm"
         generate_completions_from_executable(bin/"csm", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ninanung/csm/releases/download/v0.2.0/csm_0.2.0_linux_arm64.tar.gz"
-      sha256 "41b0e8f0f250de08755425d674461faf23dda6903b0c29bf6b1ab17d8ac216c0"
+      url "https://github.com/ninanung/csm/releases/download/v0.3.0/csm_0.3.0_linux_arm64.tar.gz"
+      sha256 "aafa521eeab8c2df540e446d603a03ced4178ce43597b4ca7b63f51eafc06cb1"
       define_method(:install) do
         bin.install "csm"
         generate_completions_from_executable(bin/"csm", "completion")
